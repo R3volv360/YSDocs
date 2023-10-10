@@ -180,9 +180,9 @@ Narrator: Hi, I'm the narrator for this beginner's guide!
 Narrator: I'm talking to you with Yarn Spinner!
 Narrator: What do you think of all this, then?
     -> It's alright, I guess.
-        **<<jump Alright>>**
+        <<jump Alright>>
     -> It's great. I love it.
-        **<<jump Love>>**
+        <<jump Love>>
 ===
 
 title: Alright
@@ -225,9 +225,9 @@ Narrator: Hi, I'm the narrator for this beginner's guide!
 Narrator: I'm talking to you with Yarn Spinner!
 Narrator: What do you think of all this, then?
     -> It's alright, I guess.
-        **<<jump Alright>>**
+        <<jump Alright>>
     -> It's great. I love it.
-        **<<jump Love>>**
+        <<jump Love>>
 ===
 ```
 
@@ -372,7 +372,7 @@ Narrator: What's your actual name, anyway?
     -> My name is not Bruce.
         <<set $characterName to "Notbruce">>
     -> My name doesn't matter...
-**Narrator: Ah, nice to meet you, {$characterName}!**
+Narrator: Ah, nice to meet you, {$characterName}!
 ===
 ```
 
@@ -401,15 +401,15 @@ Narrator: What's your actual name, anyway?
         <<set $charName to "Notbruce">>
     -> My name doesn't matter...
 Narrator: Ah, nice to meet you, {$charName}!
-**<<if $charName is "Bruce">>**
+<<if $charName is "Bruce">>
     Narrator: I'm Bruce, too!
     Narrator: What a coincidence!
-**<<elseif $charName is "Notbruce">>**
+<<elseif $charName is "Notbruce">>
     Narrator: That seems like a strange name, but I won't judge.
-**<<else>>**
+<<else>>
     Narrator: That's a lazy name.
     Narrator: You should be ashamed of yourself.
-**<<endif>>**
+<<endif>>
 Narrator: Well, goodbye, {$charName}!
 ===
 ```
@@ -461,15 +461,15 @@ Narrator: What's your actual name, anyway?
         <<set $charName to "Notbruce">>
     -> My name doesn't matter...
 Narrator: Ah, nice to meet you, {$charName}!
-**<<if $charName is "Bruce">>**
+<<if $charName is "Bruce">>
     Narrator: I'm Bruce, too!
     Narrator: What a coincidence!
-**<<elseif $charName is "Notbruce">>**
+<<elseif $charName is "Notbruce">>
     Narrator: That seems like a strange name, but I won't judge.
-**<<else>>**
+<<else>>
     Narrator: That's a lazy name.
     Narrator: You should be ashamed of yourself.
-**<<endif>>**
+<<endif>>
 Narrator: Well, goodbye, {$charName}!
 ===
 ```
@@ -502,7 +502,7 @@ Narrator: Ah, nice to meet you, {$charName}!
 <<endif>>
 Narrator: Well, goodbye, {$charName}!
 	-> Bye, bye!
-	**-> Bye, Brucey! <<if $charName is "Bruce">>**
+	-> Bye, Brucey! <<if $charName is "Bruce">>
 ===
 ```
 
@@ -708,6 +708,6 @@ With that all said, in the next part, we’ll take things further and start usin
 
 [^2]: The header, with the node's title (Start).
 
-[^3]: The `---` marker indicates where teh body of a node begins.
+[^3]: The `---` marker indicates where the body of a node begins.
 
 [^4]: The `===` marker, which indicates the end of a node.
